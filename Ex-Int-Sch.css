@@ -1,0 +1,456 @@
+html, body {
+    font-family: 'poppins', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+body no-scroll {
+    overflow: hidden;
+}
+header{
+    background: green;
+    height: 130px;
+    width: 100%;
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+ul {
+    list-style: none;  
+    text-align: right;         
+}
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.flex-container {
+    width: 50%;
+    height: 100%;
+    color: white;
+    padding: 20px ;
+    position: relative;
+    left: 50px;
+}
+.search {
+    display: inline-block;
+    padding: 5px;
+    border: solid 1px rgb(82, 80, 80);
+    background-color: white;
+}
+/* home_page_content */
+section {
+    padding: 20px 15%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home {
+    min-height: 90vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.9)), url(Image/Img_1_1.jpg) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+.First_home {
+    position: absolute;
+    bottom: 80px;
+    left:50px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.First_home div:first-child{
+    margin: 0px 20px 10px 0px;
+}
+.Second_home {
+    position: absolute;
+    width: 80%;
+    bottom: -40px;
+}
+.Page {
+    background: green;
+    display: inline-block;
+    float: right;
+    color: white;  
+    padding: 20px; 
+}
+.Page ul li{
+    padding: 20px;
+    border-right: solid 1px rgb(224, 216, 216);
+    display: inline-block;
+    color: white;
+}
+.Page ul li:last-child {
+    padding: 20px;
+    display: inline-block;
+    border: none;
+}
+.Page ul li a {
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+/* PopUp */
+.section_one {
+    padding: 100px 0px;
+    width: 100%;
+    background:linear-gradient(rgba(247, 242, 242, 0.466), rgba(247, 242, 242, 0.904)), url(Image/esquisse-darchitecte.jpg) no-repeat;  
+    background-position-x: right;  
+    background-position-y:bottom;
+}
+
+.first_div {
+  width: 100%;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+.first_one {
+  position: relative;
+  width: 275px;
+  height: 184px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.first_one img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+/*
+.first_one h4 {
+  text-align: center;
+  margin: 5px 0;
+}*/
+/* ===== OVERLAY ===== */
+.first_one .overlay {
+  display: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+  padding-top: 70px;
+  font-size: 20px;
+}
+.first_one:hover .overlay {
+  display: block;
+}
+.first_one:hover h4 {
+  display: none;
+}
+/* ===== POPUP ===== */
+.popup {
+  display: none; /* caché au départ */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+    width: 50%;
+    height: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.popup-content h2 {
+  margin-top: 0;
+}
+.close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Director's Message */
+
+.Second_div {
+    padding: 0px;
+    width: 100%;
+    height: 500px;
+    color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Director_msg {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    flex-direction: column;
+}
+
+/* Citation */
+.last_div { 
+    padding: 20px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+.sub {
+    margin: 20px 0px;
+    border-left: solid 3px green;
+    position: absolute;
+    top: 1850px;
+    left: 500px;
+    height: 120px;
+}
+
+/* Program Show */
+
+.blocks {
+    padding: 20px 8%;
+    width: 100%;
+    height: 400px;
+    color: green;
+}
+
+.block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+.icone {
+    margin: 80px 0px;
+    padding: 20px 20px;
+}
+.block_one {
+    margin: 60px 0px;
+    padding: 20px;
+    width: 20%;
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(rgba(3, 102, 8, 0.973), rgba(3, 102, 8, 0.863)), url(Image/logo_School.jpg);
+    background-position: left;
+    background-size: cover;
+    height: 259px;
+}
+.block_two {
+    margin: 60px 20px;
+    padding: 15px;
+    width: 35%;
+    height: 259px;
+    font-size: 27px;
+    background-color: whitesmoke;
+    transition: 1500ms ease-in-out;
+    
+}
+.blocks .block_two:hover {
+   background-color: rgba(3, 102, 8, 0.973);
+}
+.blocks .block_two:hover .over {
+   color: white;
+}
+
+.blocks .block_two:hover font {
+    color: white;
+}
+.block_three {
+    margin: 60px 20px;
+    padding: 20px;
+    width: 25%;
+    height: 259px;
+    font-size: 30px;
+    background-color: whitesmoke;
+    transition: 1500ms ease-in-out;
+}
+.blocks .block_three:hover {
+    background-color: rgba(3, 102, 8, 0.973);
+}
+.blocks .block_three:hover .over {
+    color: white;
+}
+ 
+.blocks .block_three:hover font {
+     color: white;
+}
+ 
+.block_four {
+    margin: 60px 20px;
+    padding: 20px;
+    width: 29%;
+    height: 259px;
+    font-size: 30px;
+    background-color: whitesmoke;
+    transition: 1500ms ease-in-out;
+}
+.blocks .block_four:hover {
+    background-color: rgba(3, 102, 8, 0.973);
+ }
+.blocks .block_four:hover .over {
+    color: white;
+}
+ 
+.blocks .block_four:hover font {
+     color: white;
+}
+/* Formulaire */
+.body {
+    padding: 10px ;
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    height: 990px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+.contact_us { 
+    margin: 50px;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 800px;
+}
+.contact_us h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+    color: green;
+}
+.contact_us label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: black;
+}
+.contact_us input,
+.contact_us select,
+.contact_us textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.contact_us input:focus,
+.contact_us select:focus,
+.contact_us textarea:focus {
+    border-color: green;
+    outline: none;
+    box-shadow: 0 0 5px rgba(12, 12, 12, 0.3);
+}
+.contact_us textarea {
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 30px;
+}
+.contact_us button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(13, 14, 13);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact_us button:hover {
+    background-color: green;
+}
+.contact_us p {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 25px;
+}
+/* Maps */
+.map_section {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+.map_section h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+/* Footer */
+.call {
+    width: 100%;
+    height: 120px;
+    padding: 35px;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+.call_view {
+    width: 155px;
+    height: 45px;
+    padding: 14px;
+    position: absolute;
+    top: 3475px;
+    left: 1090px;
+    background: rgb(14, 26, 14);
+}
+
+.footer {
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(rgba(13, 180, 63, 0.938), rgba(29, 110, 92, 0.849)), url(Image/Img_13.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.first_footer {
+    margin: 0px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+.flexone {
+    padding: 0;
+    width: 50%;
+    height: 100%;
+}
+.flextwo {
+    padding: 0;
+    margin: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.flex_container {
+    margin: 0;
+    width: 100%;
+    color: white;
+    display: flex;
+    float: left;
+}
+.flex_one{
+    margin: 20px;
+    width: 50%;
+    mix-blend-mode: multiply;
+}
+.flex_two{
+    margin: 30px;
+    width: 50%;
+}
