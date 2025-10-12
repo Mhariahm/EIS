@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> EIS Website </title>
-    <link rel="stylesheet" href="Ex-Int-Sch.css">
+    <link rel="stylesheet" href="style.css">
 </head>
     <body>
         <header>
@@ -33,14 +33,14 @@
                 </font>
             </div>
             <div class="First_home">
-                <div>
+                <!-- <div>
                     <div class="cercle" id="suivant">
                         fa right
                     </div><br>
                     <div class="cercle" id="precedent">
                         fa right
                     </div>
-                </div>
+                </div> -->
                 <div>
                     <font size="+10" ; color="white"; font-family: 'poppins', sans-serif;>
                         English, French, Arabic
@@ -79,12 +79,13 @@
 
         <section class="section_one">
             <div class="first_div" id="programs">
-                <div class="first_one">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="English"> 
+                <div class="first_one" >
+                    <img class="overlay_img" src="Images et Icones/P-1C-College.jpg" alt="English"> 
                     <h4>
                         <i>English Excellence</i> 
                     </h4>
                     <div class="overlay"
+                    data-meta="Images et Icones/P-1C-College.jpg"
                          data-title="English Excellence"
                          data-message="Bienvenue dans le programme English Excellence. Ici vous apprendrez l’anglais rapidement.">
                       English Excellence
@@ -185,10 +186,11 @@
                 </div>
             
                 <div class="block_four">
-                    <div class="over">5<sup>th</sup> Annual Trunk or Treat Event</div>  <br><br>
+                    <!-- <div class="over">5<sup>th</sup> Annual Trunk or Treat Event</div>  <br><br>
                     <font color="black">
                         <font size="+1">October 24, 2018</font>
-                    </font>
+                    </font> -->
+                    <iframe width="300" height="315" src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <br> <br> <br> <br>
@@ -291,6 +293,8 @@
                 <span class="close">&times;</span>
                 <h2>Détails</h2>
                 <p>Voici plus d’informations sur ce groupe de mots.</p>
+                 <img src="Images et Icones/P-1C-College.jpg" alt="French"> 
+
           </div>
         </div>
         <!-- ===== SCRIPT ===== -->
@@ -301,15 +305,20 @@
             // Sélectionner le titre et le texte du popup
             const popupTitle = popup.querySelector("h2");
             const popupText = popup.querySelector("p");
+              const popupImg = popup.querySelector("img");
             // Écoute sur chaque overlay
             overlays.forEach((overlay) => {
               overlay.addEventListener("click", () => {
                 // Récupérer les données
                 const title = overlay.getAttribute("data-title");
                 const message = overlay.getAttribute("data-message");
+                 const image = overlay.getAttribute("data-meta");
+                
+            // const overlayImgs = document.querySelectorAll(".first_one .overlay_img");
                 // Remplacer le contenu du popup
                 popupTitle.textContent = title;
                 popupText.textContent = message;
+                popupImg.setAttribute("src",image)
                 // Afficher le popup
                 popup.style.display = "flex";
               });
