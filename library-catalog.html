@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Catalog - Excellence International Schools</title>
+    <meta name="description" content="Explore our extensive library catalog featuring books in English, French, and Arabic for students and faculty.">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="Images et Icones/Logo.png" type="image/png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="Images et Icones/Logo.png" alt="EIS Logo" class="logo-spin">
+            </div>
+            <div class="loading-text">Excellence International Schools</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="Images et Icones/Logo.png" alt="EIS Logo" class="header-logo">
+                <span class="brand-text">Excellence International Schools</span>
+            </div>
+            
+            <div class="nav-contact">
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>(225) 050 594 4492</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="Index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Index.html#programs" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Index.html#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Index.html#maps" class="nav-link">Location</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="Index.html"><i class="fas fa-home"></i> Home</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Library Catalog</span>
+            </div>
+            <h1 class="page-title">Library Catalog</h1>
+            <p class="page-subtitle">Discover our extensive collection of books, resources, and digital materials</p>
+        </div>
+    </section>
+
+    <!-- Library Stats -->
+    <section class="library-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Books</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Digital Resources</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-header">
+                    <h2>Search Our Collection</h2>
+                    <p>Find books, articles, and resources across all subjects and languages</p>
+                </div>
+                
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" id="search-input" placeholder="Search by title, author, subject, or ISBN...">
+                        <button type="button" id="search-btn" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="language-filter">Language:</label>
+                            <select id="language-filter">
+                                <option value="">All Languages</option>
+                                <option value="english">English</option>
+                                <option value="french">French</option>
+                                <option value="arabic">Arabic</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="subject-filter">Subject:</label>
+                            <select id="subject-filter">
+                                <option value="">All Subjects</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="language-arts">Language Arts</option>
+                                <option value="islamic-studies">Islamic Studies</option>
+                                <option value="social-studies">Social Studies</option>
+                                <option value="literature">Literature</option>
+                                <option value="history">History</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="grade-filter">Grade Level:</label>
+                            <select id="grade-filter">
+                                <option value="">All Grades</option>
+                                <option value="pre-k">Pre-K</option>
+                                <option value="kindergarten">Kindergarten</option>
+                                <option value="1st">1st Grade</option>
+                                <option value="2nd">2nd Grade</option>
+                                <option value="3rd">3rd Grade</option>
+                                <option value="4th">4th Grade</option>
+                                <option value="5th">5th Grade</option>
+                                <option value="6th">6th Grade</option>
+                                <option value="7th">7th Grade</option>
+                                <option value="8th">8th Grade</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" id="clear-filters" class="clear-btn">
+                            <i class="fas fa-times"></i>
+                            Clear Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Collections</h2>
+                <p class="section-subtitle">Explore our most popular and recently added resources</p>
+            </div>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="Images et Icones/P-1C-College.jpg" alt="Islamic Literature">
+                        <div class="collection-overlay">
+                            <span class="collection-badge">Featured</span>
+                        </div>
+                    </div>
+                    <div class="collection-content">
+                        <h3>Islamic Literature</h3>
+                        <p>Classical and contemporary Islamic texts, Quranic studies, and Islamic history</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-book"></i> 2,500+ Books</span>
+                            <span><i class="fas fa-globe"></i> Arabic & English</span>
+                        </div>
+                        <a href="#" class="collection-link">Browse Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="Images et Icones/P-University.jpg" alt="Science & Technology">
+                        <div class="collection-overlay">
+                            <span class="collection-badge">New</span>
+                        </div>
+                    </div>
+                    <div class="collection-content">
+                        <h3>Science & Technology</h3>
+                        <p>Modern science textbooks, technology resources, and STEM materials</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-book"></i> 3,200+ Books</span>
+                            <span><i class="fas fa-laptop"></i> Digital Resources</span>
+                        </div>
+                        <a href="#" class="collection-link">Browse Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="Images et Icones/P-Primaire.jpg" alt="Multilingual Resources">
+                        <div class="collection-overlay">
+                            <span class="collection-badge">Popular</span>
+                        </div>
+                    </div>
+                    <div class="collection-content">
+                        <h3>Multilingual Resources</h3>
+                        <p>Books and materials in English, French, and Arabic for language learning</p>
+                        <div class="collection-stats">
+                            <span><i class="fas fa-book"></i> 4,800+ Books</span>
+                            <span><i class="fas fa-language"></i> 3 Languages</span>
+                        </div>
+                        <a href="#" class="collection-link">Browse Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Categories -->
+    <section class="book-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Browse by Category</h2>
+                <p class="section-subtitle">Find resources organized by subject and grade level</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Mathematics</h3>
+                        <p>Textbooks, workbooks, and problem-solving guides</p>
+                        <div class="category-count">1,200+ Items</div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Science</h3>
+                        <p>Biology, chemistry, physics, and environmental science</p>
+                        <div class="category-count">1,800+ Items</div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Language Arts</h3>
+                        <p>Reading, writing, grammar, and literature</p>
+                        <div class="category-count">2,100+ Items</div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Islamic Studies</h3>
+                        <p>Quran, Hadith, Islamic history, and Arabic language</p>
+                        <div class="category-count">2,500+ Items</div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Social Studies</h3>
+                        <p>History, geography, civics, and world cultures</p>
+                        <div class="category-count">1,400+ Items</div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Arts & Creativity</h3>
+                        <p>Art, music, drama, and creative writing</p>
+                        <div class="category-count">800+ Items</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Resources -->
+    <section class="digital-resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Digital Resources</h2>
+                <p class="section-subtitle">Access online databases, e-books, and educational platforms</p>
+            </div>
+            
+            <div class="digital-grid">
+                <div class="digital-card">
+                    <div class="digital-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="digital-content">
+                        <h3>Online Databases</h3>
+                        <p>Academic journals, research papers, and scholarly articles</p>
+                        <ul class="digital-features">
+                            <li>JSTOR Academic Collection</li>
+                            <li>ProQuest Education Database</li>
+                            <li>Islamic Studies Online</li>
+                        </ul>
+                        <a href="#" class="digital-link">Access Databases <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <div class="digital-card">
+                    <div class="digital-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="digital-content">
+                        <h3>E-Book Collection</h3>
+                        <p>Digital books accessible on any device</p>
+                        <ul class="digital-features">
+                            <li>3,000+ E-books</li>
+                            <li>Offline Reading</li>
+                            <li>Interactive Features</li>
+                        </ul>
+                        <a href="#" class="digital-link">Browse E-books <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <div class="digital-card">
+                    <div class="digital-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="digital-content">
+                        <h3>Educational Videos</h3>
+                        <p>Video lectures, documentaries, and educational content</p>
+                        <ul class="digital-features">
+                            <li>Khan Academy Integration</li>
+                            <li>Islamic Educational Videos</li>
+                            <li>Multilingual Content</li>
+                        </ul>
+                        <a href="#" class="digital-link">Watch Videos <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Services -->
+    <section class="library-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Library Services</h2>
+                <p class="section-subtitle">Comprehensive support for students, teachers, and parents</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Research Assistance</h3>
+                        <p>Librarian support for research projects and assignments</p>
+                        <ul class="service-features">
+                            <li>One-on-one consultations</li>
+                            <li>Citation help</li>
+                            <li>Source evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Reading Programs</h3>
+                        <p>Encourage reading with our various programs</p>
+                        <ul class="service-features">
+                            <li>Summer Reading Challenge</li>
+                            <li>Book Clubs</li>
+                            <li>Author Visits</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Technology Access</h3>
+                        <p>Computers, tablets, and internet access</p>
+                        <ul class="service-features">
+                            <li>25+ Computers</li>
+                            <li>High-speed Internet</li>
+                            <li>Printing Services</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Extended Hours</h3>
+                        <p>Flexible access to library resources</p>
+                        <ul class="service-features">
+                            <li>Monday-Friday: 7:00 AM - 6:00 PM</li>
+                            <li>Saturday: 9:00 AM - 3:00 PM</li>
+                            <li>Online Catalog 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-cta">
+            <div class="cta-content">
+                <h3>Need Help Finding Resources?</h3>
+                <p>Our librarians are here to assist you with your research needs</p>
+                <a href="Index.html#contact" class="cta-button">
+                    <i class="fas fa-envelope"></i>
+                    Contact Librarian
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-container">
+                <div class="footer-section school-info">
+                    <div class="school-logo">
+                        <img src="Image/logo_School.jpg" alt="EIS Logo">
+                    </div>
+                    <div class="school-details">
+                        <h4>Excellence International Schools</h4>
+                        <p class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            01 BP Abidjan, Côte d'Ivoire, Abobo
+                        </p>
+                        <p class="phone">
+                            <i class="fas fa-phone"></i>
+                            (225) 050 594 4492
+                        </p>
+                        <p class="email">
+                            <i class="fas fa-envelope"></i>
+                            library@excellenceinternational.edu
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-section quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="Index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="academic-calendar.html"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+                        <li><a href="library-catalog.html"><i class="fas fa-book"></i> Library Catalog</a></li>
+                        <li><a href="faculty-directory.html"><i class="fas fa-users"></i> Faculty Directory</a></li>
+                        <li><a href="admissions.html"><i class="fas fa-file-alt"></i> Admissions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section resources">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="partnerships.html"><i class="fas fa-handshake"></i> Partnerships</a></li>
+                        <li><a href="Index.html#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+                        <li><a href="Index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="Index.html#maps"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Library App</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link linkedin" aria-label="Connect with us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Stay Updated</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit" aria-label="Subscribe to newsletter">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2024 Excellence International Schools. All Rights Reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Legal Notice</a>
+                    </div>
+                </div>
+                <div class="developer-credit">
+                    <p>Website by <strong>Mister Akanji</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Search functionality
+        const searchBtn = document.getElementById('search-btn');
+        const searchInput = document.getElementById('search-input');
+        const clearFiltersBtn = document.getElementById('clear-filters');
+
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+                performSearch(searchTerm);
+            }
+        });
+
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    performSearch(searchTerm);
+                }
+            }
+        });
+
+        function performSearch(term) {
+            // Simulate search functionality
+            alert(`Searching for: "${term}"\n\nThis would normally display search results from our library catalog.`);
+        }
+
+        clearFiltersBtn.addEventListener('click', function() {
+            document.getElementById('language-filter').value = '';
+            document.getElementById('subject-filter').value = '';
+            document.getElementById('grade-filter').value = '';
+            searchInput.value = '';
+        });
+
+        // Newsletter form
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (email) {
+                    this.querySelector('button').innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.reset();
+                        this.querySelector('button').innerHTML = '<i class="fas fa-paper-plane"></i>';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.stat-card, .collection-card, .category-card, .digital-card, .service-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
