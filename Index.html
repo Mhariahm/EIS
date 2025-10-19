@@ -1,342 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EIS Website </title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> EIS Website </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
     <body>
-        <header>
-            <div class="flex-container">
-                <img src="Images et Icones/Logo.png " width="100px" height="100%">
+        <header class="header">
+            <div class="logo-container">
+                <img src="Images et Icones/Logo.png" alt="EIS Logo" class="logo">
             </div>
-            <div style="width: 50%; height: 100%; padding: 20px;">
-                <form style=" margin-bottom: 30px; position: relative; left: 450px; ">
-                    <font color="white"> <img src="Images et Icones/" width="25px" height="23px"> (225) 050 594 4492</font>
-                </form> 
-                <ul class="h">
-                    <li> <a href="#home"> Home </a> </li>
-                    <li> <a href="#programs"> Programs </a> </li>
-                    <li> <a href="#gallery"> Gallery </a> </li>
-                    <li> <a href="#contact"> Contact </a> </li>
-                    <li> <a href="#maps"> Location / Maps </a> </li>
-                </ul> 
+            <div class="header-content">
+                <div class="contact-info">
+                    <a href="tel:+2250505944492"> <i class="fa-solid fa-phone-volume"></i> (225) 050 594 4492</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#programs" class="nav-link">Programs</a></li>
+                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#maps" class="nav-link">Location / Maps</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
-        <!-- Home --> 
+        <!-- Home Section -->
         <section class="home" id="home">
-            <div style="padding: 15px; position: absolute; left:120px; display: flex;">
-                <font size="+30"; style="color: white;"> 
-                    <strong> EXCELLENCE <br> INTERNATIONAL <br> SCHOOLS </strong> 
-                </font>
+            <div class="home-title">
+                <h1>EXCELLENCE <br> INTERNATIONAL <br> SCHOOLS</h1>
             </div>
-            <div class="First_home">
-                <!-- <div>
-                    <div class="cercle" id="suivant">
-                        fa right
-                    </div><br>
-                    <div class="cercle" id="precedent">
-                        fa right
-                    </div>
-                </div> -->
-                <div>
-                    <font size="+10" ; color="white"; font-family: 'poppins', sans-serif;>
-                        English, French, Arabic
-                    </font> <br> <br>
+            <div class="home-content">
+                <div class="language-section">
+                    <h2>English, French, Arabic</h2> 
                     <p>
-                        <font color="white">
-                            Good Readers are Leaders <br>
-                            Education in an environment of faith and <br>
-                            virtue for pre-K through 8th grade.
-                        </font>
-                    </p> 
+                        Good Readers are Leaders <br>
+                        Education in an environment of faith and <br>
+                        virtue for pre-K through 8th grade.
+                    </p>
                 </div>
             </div>
-            <div class="Second_home">
-                <div class="Page">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Apply 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Visit 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Contact us 
-                            </a>
-                        </li>
-                    </ul>
+            <div class="home-actions">
+                <div class="action-buttons">
+                    <a href="#" class="action-btn">Apply</a>
+                    <a href="#" class="action-btn">Visit</a>
+                    <a href="#" class="action-btn">Contact us</a>
                 </div>
-            </div>   
+            </div>
         </section>
 
-        <section class="section_one">
-            <div class="first_div" id="programs">
-                <div class="first_one" >
-                    <img class="overlay_img" src="Images et Icones/P-1C-College.jpg" alt="English"> 
-                    <h4>
-                        <i>English Excellence</i> 
-                    </h4>
-                    <div class="overlay"
-                    data-meta="Images et Icones/P-1C-College.jpg"
+        <!-- Programs Section -->
+        <section class="section_one" id="programs">
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="Images et Icones/P-1C-College.jpg" alt="English Program">
+                    <h4><i>English Excellence</i></h4>
+                    <div class="overlay" 
                          data-title="English Excellence"
-                         data-message="Bienvenue dans le programme English Excellence. Ici vous apprendrez l’anglais rapidement.">
-                      English Excellence
+                         data-message="Welcome to the English Excellence program. Here you will learn English quickly with our specialized curriculum designed for all levels."
+                         data-image="Images et Icones/P-1C-College.jpg">
+                        English Excellence
                     </div>
                 </div>
-                <div class="first_one">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="Arabic">
-                    <h4>
-                        <i>Arabic Windows </i>
-                    </h4>
+                <div class="program-card">
+                    <img src="Images et Icones/P-1C-College.jpg" alt="Arabic Program">
+                    <h4><i>Arabic Windows</i></h4>
                     <div class="overlay"
                          data-title="Arabic Windows"
-                         data-message="Voici le programme Arabic Windows. Idéal pour apprendre l’arabe.">
-                      Arabic Windows
+                         data-message="Discover the Arabic Windows program. Perfect for learning Arabic language and culture with native speakers."
+                         data-image="Images et Icones/P-1C-College.jpg">
+                        Arabic Windows
                     </div>
                 </div>
-                <div class="first_one">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="French"> <br>
-                    <h4>
-                        <i>French Excellence</i>
-                    </h4>
+                <div class="program-card">
+                    <img src="Images et Icones/P-1C-College.jpg" alt="French Program">
+                    <h4><i>French Excellence</i></h4>
                     <div class="overlay"
                          data-title="French Excellence"
-                         data-message="Bienvenue dans French Excellence. Améliorez votre français rapidement.">
-                      French Excellence
+                         data-message="Welcome to French Excellence. Improve your French rapidly with our immersive learning approach."
+                         data-image="Images et Icones/P-1C-College.jpg">
+                        French Excellence
                     </div>
                 </div>
             </div>
-            <div class="Second_div">
-                <div class="Image">
-                    <img src="Image/Img_12.avif" >
+
+            <!-- About Section -->
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="Image/Img_12.avif" alt="School Image">
                 </div>
-                <div class="Director_msg">
-                    <h1>Who we are</h1><br>
-                    <strong>
-                        <p style=" text-align: justify; text-indent: 30px;">
-                            Excellence International Group Of School is an Islamic Community that <br>
-                            provides high-quality education in an environment of faith and virtue.
-                        </p>
-                    </strong> <br>
-                    <p style=" text-align: justify; text-indent: 30px;">
-                        <font color="black">
-                            Excellence International Group Of School builds an active partnership between,<br> 
-                            <strong> <font color="green"> school, family, and Community.</font> </strong> Excellence International Group Of School graduates <br> 
-                            are well-prepared to meet the challenges of higher education, with a strong foundation <br> 
-                            in Islamic faith, morals, and values. <br> 
-                            Our students are guided to serve others and contribute positively to society. We are <br> 
-                            committed to excellence and accredited through recognized educational standards. 
-                        </font>                                                               
-                    </p><br>
-                    <button>
-                        About EIGOS <i class="fa-solid fa-angle-right"></i>
-                    </button> 
+                <div class="about-content">
+                    <h1>Who we are</h1>
+                    <p class="intro-text">
+                        Excellence International Group Of School is an Islamic Community that provides high-quality education in an environment of faith and virtue.
+                    </p>
+                    <p class="description">
+                        Excellence International Group Of School builds an active partnership between <span class="highlight">school, family, and Community.</span> Excellence International Group Of School graduates are well-prepared to meet the challenges of higher education, with a strong foundation in Islamic faith, morals, and values. Our students are guided to serve others and contribute positively to society. We are committed to excellence and accredited through recognized educational standards.
+                    </p>
+                    <button class="about-btn">
+                        About EIGOS <i class="fas fa-angle-right"></i>
+                    </button>
                 </div>
             </div>
-            <div class="last_div">
-                <img src="Image/Cite1.png" width="30px" height="30px"> 
-                <cite> 
-                    At Excellence International Group Of School, we ignite curiosity <br> 
-                    and nurture faith,  offering young Muslims a journey of excellence <br> 
-                    to become enlightened and responsible leaders.
-                </cite> 
-                <img src="Image/Cite2.png" width="30px" height="30px"> <br> <br>
-                <p><font color="#000011"> <font size="5">Jane Doe |  Parent</font> </font></p>
+
+            <!-- Testimonial -->
+            <div class="testimonial">
+                <blockquote>
+                    <i class="fa-solid fa-quote-left"></i> At Excellence International Group Of School, we ignite curiosity and nurture faith, offering young Muslims a journey of excellence to become enlightened and responsible leaders. <i class="fa-solid fa-quote-right"></i>
+                </blockquote>
+                <cite>Jane Doe | Parent</cite>
             </div>
-            <div class="sub"></div>
         </section>
 
-        <div class="blocks" id="gallery">
-            <div class="block">
-                <div class="icone">
-                    <div class="cercle">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div> <br> <br>
-                    <div class="cercle">
-                        <i class="fa-solid fa-arrow-right"></i>
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <div class="gallery-header">
+                    <div class="nav-icons">
+                        <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
+                        <div class="nav-icon"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                    <div class="gallery-title">
+                        <h2>News and Events</h2>
+                        <a href="#" class="view-all">
+                            View All <i class="fas fa-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             
-                <div class="block_one">
-                    News and Events <br> <br>
-                    <li><font size="+1"> View All </font> </li>
-                    <i class="fa-solid fa-angle-right"></i> 
-                </div>
-            
-                <div class="block_two">
-                    <div class="over">Islamic School Information Night and Open Houses</div> <br><br>
-                    <font color="black">
-                        <font size="+1">October 2 - 6, 2018</font>
-                    </font>
-                </div>
-            
-                <div class="block_three">
-                    <div class="over">Auction Procurement is Underway</div> <br><br>
-                    <font color="black">
-                        <font size="+1">February 2, 2019</font>
-                    </font>
-                </div>
-            
-                <div class="block_four">
-                    <!-- <div class="over">5<sup>th</sup> Annual Trunk or Treat Event</div>  <br><br>
-                    <font color="black">
-                        <font size="+1">October 24, 2018</font>
-                    </font> -->
-                    <iframe width="300" height="315" src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="item-overlay">Islamic School Information Night and Open Houses</div>
+                        <p>October 2 - 6, 2018</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="item-overlay">Auction Procurement is Underway</div>
+                        <p>February 2, 2019</p>
+                    </div>
+                    <div class="gallery-item video-item">
+                        <iframe src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-            <br> <br> <br> <br>
+        </section>
+    
+        <!-- Contact & Maps Section -->
+        <div class="contact-maps-container">
+            <!-- Contact Form -->
+            <div class="contact-section" id="contact">
+                <div class="contact-container">
+                    <h2>Contact The Director's Office</h2>
+                    <p class="contact-subtitle">We'd love to hear from you. Please fill out the form below.</p>
 
-        </div>
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Ex: John Doe" required>
+                        </div>
 
-        <div class="body">
-            <!-- Formulaire de contact us -->
-            <div class="contact_us" id="contact">
-                <h2> Contact The Director's Office </h2>
-                <p>We’d love to hear from you. Please fill out the form below.</p>
-                <form action="#" method="post">
-                    <label for="name">Full Name :</label>
-                    <input type="text" id="name" name="name" placeholder="Ex: John Doe" required>
-                    <label for="email">Email Address :</label>
-                    <input type="email" id="email" name="email" placeholder="Ex: john@example.com" required>
-                    <label for="phone">Phone Number :</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Ex: ‪+1 234 567 8900‬">
-                    <label for="category">I am...</label>
-                    <select id="category" name="category" required>
-                        <option value="">Select</option>
-                        <option value="parent">Parent</option>
-                        <option value="student">Future Student</option>
-                        <option value="partner">Partner</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Ex: Admission Inquiry" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Ex: john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Ex: +1 234 567 8900">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">I am...</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select</option>
+                                <option value="parent">Parent</option>
+                                <option value="student">Future Student</option>
+                                <option value="partner">Partner</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Ex: Admission Inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
-
-            <!-- Maps -->
-            <div class="map_section" id="maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.859265839304!2d-4.035590445113884!3d5.441766050352815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1954f29200f69%3A0xd81049aa234510bf!2sEXCELLENCE%20INTERNATIONAL%20SCHOOLS!5e0!3m2!1sfr!2sci!4v1757935885165!5m2!1sfr!2sci" width="600px" height="800px" style="border:5px; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+            <!-- Maps Section -->
+            <div class="maps-section" id="maps">
+                <div class="map-container">
+                    <h2>Our Location</h2>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.859265839304!2d-4.035590445113884!3d5.441766050352815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1954f29200f69%3A0xd81049aa234510bf!2sEXCELLENCE%20INTERNATIONAL%20SCHOOLS!5e0!3m2!1sfr!2sci!4v1757935885165!5m2!1sfr!2sci" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div> 
 
         <!-- Footers -->
         <footer>
-            <div class="call">
-                <font size="+3">Schedule a visit at Excellence International School </font>
-                <div class="call_view">
-                    <font size="3px"> Schedule a visit </font> <i class="bi-arrow-right-circle-fill::before"></i> 
+            <div class="footer-cta">
+                <h3>Schedule a visit at Excellence International School</h3>
+                <a href="#" class="cta-button">
+                    Schedule a visit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <img src="Image/logo_School.jpg" alt="School Logo">
+                        </div>
+                        <div class="footer-contact">
+                            <p>
+                                01 BP Abidjan, <br>
+                                Côte d'Ivoire, Abobo
+                            </p>
+                            <a href="#maps" class="footer-link">
+                                Directions <i class="fas fa-angle-right"></i>
+                            </a>
+                            <p>
+                                School Office: <a href="tel:+2250505944492" style="color: #ffeb3b;">(225) 050 594 4492</a><br>
+                                Fax: (225) 450-3918
+                            </p>
+                            <a href="#contact" class="footer-link">
+                                Contact us <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="link-column">
+                            <a href="#home">Home</a>
+                            <a href="#programs">Programs</a>
+                            <a href="#gallery">Gallery</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#maps">Location / Maps</a>
+                        </div>
+                        <div class="link-column">
+                            <a href="#">Calendars & Schedules</a>
+                            <a href="#">Clever</a>
+                            <a href="#">Staff</a>
+                            <a href="#">Library Catalog</a>
+                            <div class="social-section">
+                                <hr>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-facebook"></i> Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        Excellence International School 2018 | All Rights Reserved | Legal Notice
+                    </div>
+                    <div class="footer-credit">
+                        Website by: <strong>Mister Akanji</strong>
+                    </div>
                 </div>
             </div>
-           <section class="footer">
-                <div class="first_footer">
-                    <div class="flexone">
-                        <div class="flex_container">
-                            <div class="flex_one">
-                                <img src="Image/logo_School.jpg">
-                            </div>
-                            <div class="flex_two"> <br>
-                                01 BP Abidjan, <br> 
-                                Côte d'Ivoire, Abobo <br> 
-                                <b>Directions</b> <i class="fa-solid fa-angle-right"></i> <i class="bi-arrow-right-circle-fill::before"></i> <br> <br> 
-                                School Office : (225) 050 594 4492 <br> 
-                                Fax : (225) 450-3918 <br> 
-                                <b>Contact us</b> <i class="fa-solid fa-angle-right"></i> <i class="bi-arrow-right-circle-fill::before"></i>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="flextwo">
-                        <div style="font-size: 22px; color: white; margin: 20px;"> 
-                            <a href="#home">Home</a> <br>
-                            <a href="#programs">Programs</a> <br>
-                            <a href="#gallery">Gallery</a> <br>
-                            <a href="#contact">Contact</a> <br>
-                            <a href="#maps">Location / Maps</a> <br>
-                            
-                        </div>
-                        <div style="font-size: 22px; color: white; margin: 20px;">
-                            Calendars & Schedules <br>
-                            Clever <br>
-                            Staff <br>
-                            Library Catalog <br> <br>
-                            <hr width="30px"/> <br>
-                            Facebook
-                        </div>
-                    </div>
-                </div>
-                <hr size="5px"/>
-                <div style="width: 100%; height: 20px;">
-                    <div style="width: 50%; height: 20px; float: left; color: white;">
-                        Excellence International School 2018 |  All Rights Reserved | Legal Notice
-                    </div>
-                    <div style="width: 20%; height: 20px; float: right; color: white;">
-                        Website by : <strong> Mister Akanji</strong>
-                    </div>
-                </div>
-           </section>
         </footer>
 
-        <!-- ===== POPUP ===== -->
+        <!-- Popup Modal -->
         <div id="popup" class="popup">
-          <div class="popup-content">
+            <div class="popup-content">
                 <span class="close">&times;</span>
-                <h2>Détails</h2>
-                <p>Voici plus d’informations sur ce groupe de mots.</p>
-                 <img src="Images et Icones/P-1C-College.jpg" alt="French"> 
-
-          </div>
+                <div class="popup-body">
+                    <div class="popup-image">
+                        <img id="popup-img" src="" alt="Program Image">
+                    </div>
+                    <div class="popup-info">
+                        <h2 id="popup-title">Program Details</h2>
+                        <p id="popup-message">Program description will appear here.</p>
+                        <div class="program-features">
+                            <h3>Program Features:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Certified Teachers</li>
+                                <li><i class="fas fa-check"></i> Interactive Learning</li>
+                                <li><i class="fas fa-check"></i> Modern Facilities</li>
+                                <li><i class="fas fa-check"></i> International Curriculum</li>
+                            </ul>
+                        </div>
+                        <button class="info-btn">More Information</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- ===== SCRIPT ===== -->
+
+
         <script>
-            const popup = document.getElementById("popup");
-            const closeBtn = document.querySelector(".close");
-            const overlays = document.querySelectorAll(".first_one .overlay");
-            // Sélectionner le titre et le texte du popup
-            const popupTitle = popup.querySelector("h2");
-            const popupText = popup.querySelector("p");
-              const popupImg = popup.querySelector("img");
-            // Écoute sur chaque overlay
-            overlays.forEach((overlay) => {
-              overlay.addEventListener("click", () => {
-                // Récupérer les données
-                const title = overlay.getAttribute("data-title");
-                const message = overlay.getAttribute("data-message");
-                 const image = overlay.getAttribute("data-meta");
-                
-            // const overlayImgs = document.querySelectorAll(".first_one .overlay_img");
-                // Remplacer le contenu du popup
-                popupTitle.textContent = title;
-                popupText.textContent = message;
-                popupImg.setAttribute("src",image)
-                // Afficher le popup
-                popup.style.display = "flex";
-              });
+            // Navigation fluide
+            document.querySelectorAll('.nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
+
+            // Gestion du Popup
+            const popup = document.getElementById('popup');
+            const closeBtn = document.querySelector('.close');
+            const programCards = document.querySelectorAll('.program-card');
+
+            // Ouvrir le popup
+            programCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const overlay = this.querySelector('.overlay');
+                    const title = overlay.getAttribute('data-title');
+                    const message = overlay.getAttribute('data-message');
+                    const image = overlay.getAttribute('data-image');
+
+                    document.getElementById('popup-title').textContent = title;
+                    document.getElementById('popup-message').textContent = message;
+                    document.getElementById('popup-img').src = image;
+
+                    popup.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
             // Fermer le popup
-            closeBtn.addEventListener("click", () => {
-              popup.style.display = "none";
+            closeBtn.addEventListener('click', function() {
+                popup.style.display = 'none';
+                document.body.style.overflow = 'auto';
             });
-            /*popup.addEventListener("click", (e) => {
-              if (e.target === popup) {
-                popup.style.display = "none";
-              }
-            });*/
 
-            
+            // Empêcher la fermeture en cliquant à l'extérieur
+            popup.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    return false;
+                }
+            });
 
+            // Fermer avec la touche Échap
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && popup.style.display === 'flex') {
+                    popup.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Animation au scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observer les éléments à animer
+            document.querySelectorAll('.program-card, .about-section, .gallery-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Header shadow on scroll
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+                } else {
+                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                }
+            });
         </script>
-        
 
     </body>
 </html>
