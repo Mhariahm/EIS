@@ -118,10 +118,10 @@ body {
 }
 
 .header-logo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 30%;
     background: var(--text-white);
     padding: 0.5rem;
 }
@@ -188,6 +188,45 @@ body {
     background: var(--text-white);
     transition: var(--transition);
     border-radius: 2px;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.lang-btn.active {
+    background: var(--secondary-color);
+    color: var(--text-dark);
+    border-color: var(--secondary-color);
+}
+
+.lang-btn i {
+    font-size: 0.8rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -273,6 +312,14 @@ body {
     margin-bottom: 3rem;
     opacity: 0.9;
     line-height: 1.8;
+}
+
+.hero-location {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 500;
+    display: block;
+    margin-top: 1rem;
 }
 
 .hero-actions {
@@ -1061,10 +1108,191 @@ body {
     animation: pulse 0.6s ease-in-out;
 }
 
+.submit-btn.email-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.submit-btn.email-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+/* Communication Method Selection */
+.communication-method {
+    margin-bottom: 2rem;
+}
+
+.method-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.method-label i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.method-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.method-option {
+    position: relative;
+}
+
+.method-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.method-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius-large);
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.method-card:hover::before {
+    opacity: 1;
+}
+
+.method-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+.whatsapp-card {
+    border-color: #25D366;
+}
+
+.whatsapp-card:hover,
+.method-option input[type="radio"]:checked + .whatsapp-card {
+    border-color: #25D366;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 140, 126, 0.1));
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.email-card {
+    border-color: #007bff;
+}
+
+.email-card:hover,
+.method-option input[type="radio"]:checked + .email-card {
+    border-color: #007bff;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.1));
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.whatsapp-card .method-icon {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: var(--text-white);
+}
+
+.email-card .method-icon {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: var(--text-white);
+}
+
+.method-content {
+    flex: 1;
+}
+
+.method-content h4 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.method-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.method-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Radio button selection indicator */
+.method-option input[type="radio"]:checked + .method-card::after {
+    content: '✓';
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.whatsapp-card.method-option input[type="radio"]:checked + .method-card::after {
+    background: #25D366;
+}
+
+.email-card.method-option input[type="radio"]:checked + .method-card::after {
+    background: #007bff;
 }
 
 .map-container {
@@ -1219,7 +1447,7 @@ body {
 .school-logo img {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 30%;
     background: var(--text-white);
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -1231,6 +1459,14 @@ body {
     gap: 0.5rem;
     margin-bottom: 0.8rem;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.school-description {
+    display: block !important;
+    margin-bottom: 1rem !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .school-details i {
@@ -1502,6 +1738,22 @@ body {
         display: none;
     }
     
+    .language-switcher:not(.mobile) {
+        display: none;
+    }
+    
+    .language-switcher.mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .mobile-lang-switcher {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -1546,6 +1798,10 @@ body {
     }
     
     .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .method-options {
         grid-template-columns: 1fr;
     }
     
