@@ -1,413 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> EIS Website </title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo-container">
-                <img src="Images et Icones/Logo.png" alt="EIS Logo" class="logo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EIS Website </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="Images et Icones/Logo.png" alt="EIS Logo" class="logo">
+        </div>
+        <div class="header-content">
+            <div class="contact-info">
+                <a href="tel:+2250505944492"> <i class="fa-solid fa-phone-volume"></i> (225) 050 594 4492</a> <br>
+                <a href="tel:+2348078634115"> <i class="fa-solid fa-phone-volume"></i> (234) 807 863 4115</a>
             </div>
-            <div class="header-content">
-                <div class="contact-info">
-                    <a href="tel:+2250505944492"> <i class="fa-solid fa-phone-volume"></i> (225) 050 594 4492</a>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#home" class="nav-link">Home</a></li>
-                        <li><a href="#programs" class="nav-link">Programs</a></li>
-                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                        <li><a href="#maps" class="nav-link">Location / Maps</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#programs" class="nav-link">Programs</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#maps" class="nav-link">Location / Maps</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Home Section -->
-        <section class="home" id="home">
-            <div class="home-title">
-                <h1>EXCELLENCE <br> INTERNATIONAL <br> SCHOOLS</h1>
-            </div>
-            <div class="home-content">
-                <div class="language-section">
-                    <h2>English, French, Arabic</h2> 
-                    <p>
-                        Good Readers are Leaders <br>
-                        Education in an environment of faith and <br>
-                        virtue for pre-K through 8th grade.
-                    </p>
-                </div>
-            </div>
-            <div class="home-actions">
-                <div class="action-buttons">
-                    <a href="#" class="action-btn">Apply</a>
-                    <a href="#" class="action-btn">Visit</a>
-                    <a href="#" class="action-btn">Contact us</a>
-                </div>
-            </div>
-        </section>
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-title">
+            <h1>EXCELLENCE <br> INTERNATIONAL <br> SCHOOLS</h1>
+        </div>
+        <div class="home-content">
+            <div class="language-section">
+                <h2>English, French, Arabic</h2>
+                <p>
+                    Good Readers are Leaders <br>
+                    Education in an environment of faith and <br>
+                    virtue for pre-K through 8th grade.
+                </p>
+            </div> <br><br>
 
-        <!-- Programs Section -->
-        <section class="section_one" id="programs">
-            <div class="programs-grid">
-                <div class="program-card">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="English Program">
-                    <h4><i>English Excellence</i></h4>
-                    <div class="overlay" 
-                         data-title="English Excellence"
-                         data-message="Welcome to the English Excellence program. Here you will learn English quickly with our specialized curriculum designed for all levels."
-                         data-image="Images et Icones/P-1C-College.jpg">
-                        English Excellence
-                    </div>
-                </div>
-                <div class="program-card">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="Arabic Program">
-                    <h4><i>Arabic Windows</i></h4>
-                    <div class="overlay"
-                         data-title="Arabic Windows"
-                         data-message="Discover the Arabic Windows program. Perfect for learning Arabic language and culture with native speakers."
-                         data-image="Images et Icones/P-1C-College.jpg">
-                        Arabic Windows
-                    </div>
-                </div>
-                <div class="program-card">
-                    <img src="Images et Icones/P-1C-College.jpg" alt="French Program">
-                    <h4><i>French Excellence</i></h4>
-                    <div class="overlay"
-                         data-title="French Excellence"
-                         data-message="Welcome to French Excellence. Improve your French rapidly with our immersive learning approach."
-                         data-image="Images et Icones/P-1C-College.jpg">
-                        French Excellence
-                    </div>
-                </div>
-            </div>
-
-            <!-- About Section -->
-            <div class="about-section">
-                <div class="about-image">
-                    <img src="Image/Img_12.avif" alt="School Image">
-                </div>
-                <div class="about-content">
-                    <h1>Who we are</h1>
-                    <p class="intro-text">
-                        Excellence International Group Of School is an Islamic Community that provides high-quality education in an environment of faith and virtue.
-                    </p>
-                    <p class="description">
-                        Excellence International Group Of School builds an active partnership between <span class="highlight">school, family, and Community.</span> Excellence International Group Of School graduates are well-prepared to meet the challenges of higher education, with a strong foundation in Islamic faith, morals, and values. Our students are guided to serve others and contribute positively to society. We are committed to excellence and accredited through recognized educational standards.
-                    </p>
-                    <button class="about-btn">
-                        About EIGOS <i class="fas fa-angle-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Testimonial -->
-            <div class="testimonial">
-                <blockquote>
-                    <i class="fa-solid fa-quote-left"></i> At Excellence International Group Of School, we ignite curiosity and nurture faith, offering young Muslims a journey of excellence to become enlightened and responsible leaders. <i class="fa-solid fa-quote-right"></i>
-                </blockquote>
-                <cite>Jane Doe | Parent</cite>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section class="gallery-section" id="gallery">
-            <div class="gallery-container">
-                <div class="gallery-header">
-                    <div class="nav-icons">
-                        <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
-                        <div class="nav-icon"><i class="fas fa-arrow-right"></i></div>
-                    </div>
-                    <div class="gallery-title">
-                        <h2>News and Events</h2>
-                        <a href="#" class="view-all">
-                            View All <i class="fas fa-angle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <div class="item-overlay">Islamic School Information Night and Open Houses</div>
-                        <p>October 2 - 6, 2018</p>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="item-overlay">Auction Procurement is Underway</div>
-                        <p>February 2, 2019</p>
-                    </div>
-                    <div class="gallery-item video-item">
-                        <iframe src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Contact & Maps Section -->
-        <div class="contact-maps-container">
-            <!-- Contact Form -->
-            <div class="contact-section" id="contact">
-                <div class="contact-container">
-                    <h2>Contact The Director's Office</h2>
-                    <p class="contact-subtitle">We'd love to hear from you. Please fill out the form below.</p>
-
-                    <form class="contact-form" action="#" method="post">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Ex: John Doe" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Ex: john@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Ex: +1 234 567 8900">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="category">I am...</label>
-                            <select id="category" name="category" required>
-                                <option value="">Select</option>
-                                <option value="parent">Parent</option>
-                                <option value="student">Future Student</option>
-                                <option value="partner">Partner</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Ex: Admission Inquiry" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        
-            <!-- Maps Section -->
-            <div class="maps-section" id="maps">
-                <div class="map-container">
-                    <h2>Our Location</h2>
-                    <div class="map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.859265839304!2d-4.035590445113884!3d5.441766050352815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1954f29200f69%3A0xd81049aa234510bf!2sEXCELLENCE%20INTERNATIONAL%20SCHOOLS!5e0!3m2!1sfr!2sci!4v1757935885165!5m2!1sfr!2sci" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <!-- Footers -->
-        <footer>
-            <div class="footer-cta">
-                <h3>Schedule a visit at Excellence International School</h3>
-                <a href="#" class="cta-button">
-                    Schedule a visit <i class="fas fa-arrow-right"></i>
+            <!-- Lien des deux implantaions -->
+            <div class="mt-50 text-2xl">
+                <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-green-600 transition-colors">
+                    Côte d'Ivoire (CI) — École à Abidjan <i class="fa-solid fa-school text-orange-300 text-xl"></i>
+                </a>
+                <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-green-600 transition-colors">
+                    Nigeria (NG) — École à Osun <i class="fa-solid fa-school text-orange-300 text-xl"></i>
                 </a>
             </div>
 
-            <div class="footer-main">
-                <div class="footer-content">
-                    <div class="footer-info">
-                        <div class="footer-logo">
-                            <img src="Image/logo_School.jpg" alt="School Logo">
-                        </div>
-                        <div class="footer-contact">
-                            <p>
-                                01 BP Abidjan, <br>
-                                Côte d'Ivoire, Abobo
-                            </p>
-                            <a href="#maps" class="footer-link">
-                                Directions <i class="fas fa-angle-right"></i>
-                            </a>
-                            <p>
-                                School Office: <a href="tel:+2250505944492" style="color: #ffeb3b;">(225) 050 594 4492</a><br>
-                                <a href="mailto:bakare.mariam.ade@gmail.com" style="color: #ffeb3b;"> <i class="fa-solid fa-envelope"></i> E-mail</a>
-                            </p>
-                            <a href="#contact" class="footer-link">
-                                Contact us <i class="fas fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
+            <br>
+            <em> Deux établissements, une même excellence. </em>
 
-                    <div class="footer-links">
-                        <div class="link-column">
-                            <a href="#home">Home</a>
-                            <a href="#programs">Programs</a>
-                            <a href="#gallery">Gallery</a>
-                            <a href="#contact">Contact</a>
-                            <a href="#maps">Location / Maps</a>
-                        </div>
-                        <div class="link-column">
-                            <a href="#">Calendars & Schedules</a>
-                            <a href="#">Clever</a>
-                            <a href="#">Staff</a>
-                            <a href="#">Library Catalog</a>
-                            <div class="social-section">
-                                <hr>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-facebook"></i> Facebook
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="home-actions">
+            <div class="action-buttons">
+                <a href="#" class="action-btn">Apply</a>
+                <a href="#" class="action-btn">Visit</a>
+                <a href="#" class="action-btn">Contact us</a>
+            </div>
+        </div>
+    </section>
 
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
-                        Excellence International School 2018 | All Rights Reserved | Legal Notice
-                    </div>
-                    <div class="footer-credit">
-                        Website by: <strong>Mister Akanji</strong>
-                    </div>
+    <!-- Programs Section -->
+    <section class="section_one" id="programs">
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="Images et Icones/P-1C-College.jpg" alt="English Program">
+                <h4><i>English Excellence</i></h4>
+                <div class="overlay" data-title="English Excellence"
+                    data-message="Welcome to the English Excellence program. Here you will learn English quickly with our specialized curriculum designed for all levels."
+                    data-image="Images et Icones/Certificate-E.jpg"
+                    data-additional-images='["Images et Icones/Learning-E.png", "Images et Icones/Diplôme-A.webp"]'>
+                    English Excellence
                 </div>
             </div>
-        </footer>
-
-        <!-- Popup Modal -->
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                <div class="popup-body">
-                    <div class="popup-image">
-                        <img id="popup-img" src="" alt="Program Image">
-                    </div>
-                    <div class="popup-info">
-                        <h2 id="popup-title">Program Details</h2>
-                        <p id="popup-message">Program description will appear here.</p>
-                        <div class="program-features">
-                            <h3>Program Features:</h3>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Certified Teachers</li>
-                                <li><i class="fas fa-check"></i> Interactive Learning</li>
-                                <li><i class="fas fa-check"></i> Modern Facilities</li>
-                                <li><i class="fas fa-check"></i> International Curriculum</li>
-                            </ul>
-                        </div>
-                        <button class="info-btn">More Information</button>
-                    </div>
+            <div class="program-card">
+                <img src="Images et Icones/Waliman1.jpg" alt="Arabic Program">
+                <h4><i>Arabic Windows</i></h4>
+                <div class="overlay" data-title="Arabic Windows"
+                    data-message="Discover the Arabic Windows program. Perfect for learning Arabic language and culture with native speakers."
+                    data-image="Images et Icones/Certificate-A1.jpg"
+                    data-additional-images='["Images et Icones/Learning-Arabe1.webp", "Images et Icones/Diplome-Ar.png"]'>
+                    Arabic Windows
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="Images et Icones/P-F.jpg" alt="French Program">
+                <h4><i>French Excellence</i></h4>
+                <div class="overlay" data-title="French Excellence"
+                    data-message="Welcome to French Excellence. Improve your French rapidly with our immersive learning approach."
+                    data-image="Images et Icones/Certificate-F.jpg"
+                    data-additional-images='["Images et Icones/Learning-E.png", "Images et Icones/Diplôme-F.webp"]'>
+                    French Excellence
                 </div>
             </div>
         </div>
 
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="about-image">
+                <img src="Images et Icones/Anankumullah2.png" alt="Images et Icones/Anankumullah1 (1).png">
+            </div>
+            <div class="about-content">
+                <h1>Who we are</h1>
+                <p class="intro-text">
+                    Excellence International Schools is an Islamic educational community dedicated to providing
+                    high-quality learning in an environment rooted in faith, discipline, and virtue.
+                </p>
+                <p class="description">
+                    With campuses in Côte d’Ivoire and Nigeria, we serve families who share a vision of excellence in
+                    both academic and spiritual development. Our schools build strong partnerships between <span
+                        class="highlight"> students, parents, and the community </span> to nurture well-rounded learners
+                    and responsible global citizens.
+                </p>
+                <p class="description">
+                    Graduates of Excellence International Schools are well-prepared to face the challenges of <span
+                        class="highlight"> higher education, grounded in Islamic faith, moral integrity, and lifelong values </span>. Guided by our commitment
+                    to excellence and continuous improvement, our institutions operate under recognized international
+                    educational standards.
+                </p>
+                <button class="about-btn">
+                    About EIS <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
 
-        <script>
-            // Navigation fluide
-            document.querySelectorAll('.nav-link').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+        <!-- Testimonial -->
+        <div class="testimonial">
+            <blockquote>
+                <i class="fa-solid fa-quote-left"></i>
+                At Excellence International Group of School, I’ve seen my child’s curiosity blossom and their faith grow
+                stronger. The school truly offers young Muslims a journey of excellence, shaping them into enlightened
+                and responsible leaders.
+                <i class="fa-solid fa-quote-right"></i>
+            </blockquote>
+            <cite>Al-Haji Abdul Fatay ZAKARIYA | Student Parent</cite>
+        </div>
+    </section>
 
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <div class="nav-icons">
+                    <div class="nav-icon"><i class="fas fa-arrow-left"></i></div>
+                    <div class="nav-icon"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="gallery-title">
+                    <h2>News and Events</h2>
+                    <a href="#" class="view-all">
+                        View All <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
 
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+            <div class="gallery-grid">
+                <div class="gallery-item video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <!-- <div class="item-overlay">Islamic School Information Night and Open Houses</div>
+                    <p>October 2 - 6, 2018</p> -->
+                </div>
+                <div class="gallery-item video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <!-- <div class="item-overlay">Auction Procurement is Underway</div>
+                    <p>February 2, 2019</p> -->
+                </div>
+                <div class="gallery-item video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/BtZ6tX41eUA?si=WBw1yzV4g6jGrsug&amp;controls=0&amp;start=9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+    <!-- Contact & Maps Section -->
+    <div class="contact-maps-container">
+        <!-- Contact Form -->
+        <div class="contact-section" id="contact">
+            <div class="contact-container">
+                <h2>Contact The Director's Office</h2>
+                <p class="contact-subtitle">We'd love to hear from you. Please fill out the form below.</p>
 
-            // Gestion du Popup
-            const popup = document.getElementById('popup');
-            const closeBtn = document.querySelector('.close');
-            const programCards = document.querySelectorAll('.program-card');
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: John Doe" required>
+                    </div>
 
-            // Ouvrir le popup
-            programCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const overlay = this.querySelector('.overlay');
-                    const title = overlay.getAttribute('data-title');
-                    const message = overlay.getAttribute('data-message');
-                    const image = overlay.getAttribute('data-image');
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: john@example.com" required>
+                    </div>
 
-                    document.getElementById('popup-title').textContent = title;
-                    document.getElementById('popup-message').textContent = message;
-                    document.getElementById('popup-img').src = image;
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex: +1 234 567 8900">
+                    </div>
 
-                    popup.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
+                    <div class="form-group">
+                        <label for="category">I am...</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select</option>
+                            <option value="parent">Parent</option>
+                            <option value="student">Future Student</option>
+                            <option value="partner">Partner</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
 
-            // Fermer le popup
-            closeBtn.addEventListener('click', function() {
-                popup.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message"
+                            placeholder="Please start your message with the subject...&#10;&#10;Example:&#10;Subject: Admission Inquiry&#10;&#10;Hello, I would like to inquire about..."
+                            required></textarea>
+                    </div>
 
-            // Empêcher la fermeture en cliquant à l'extérieur
-            popup.addEventListener('click', function(e) {
-                if (e.target === popup) {
-                    return false;
-                }
-            });
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
 
-            // Fermer avec la touche Échap
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && popup.style.display === 'flex') {
-                    popup.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
+        <!-- Maps Section -->
+        <div class="maps-section" id="maps"> <br>
+            <div class="map-container">
+                <h2>Our Location</h2>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.859265839304!2d-4.035590445113884!3d5.441766050352815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1954f29200f69%3A0xd81049aa234510bf!2sEXCELLENCE%20INTERNATIONAL%20SCHOOLS!5e0!3m2!1sfr!2sci!4v1757935885165!5m2!1sfr!2sci"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            // Animation au scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+    <!-- Footers -->
+    <footer>
+        <div class="footer-cta">
+            <h3>Schedule a visit at Excellence International School</h3>
+            <a href="#contact" class="cta-button">
+                Schedule a visit <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+        <div class="footer-main">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="Images et Icones/Logo.png" alt="School Logo">
+                    </div>
+                    <div class="footer-contact">
+                        <p>
+                            01 BP Abidjan, <br>
+                            Côte d'Ivoire, Abobo
+                        </p>
+                        <a href="#maps" class="footer-link">
+                            Directions <i class="fas fa-angle-right"></i>
+                        </a>
+                        <p>
+                            School Office: <a href="tel:+2250505944492" style="color: #ffeb3b;">(225) 050 594
+                                4492</a><br>
+                            <a href="mailto:bakare.mariam.ade@gmail.com" style="color: #ffeb3b;"> <i
+                                    class="fa-solid fa-envelope"></i> E-mail</a>
+                        </p>
+                        <a href="#contact" class="footer-link">
+                            Contact us <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
 
-            // Observer les éléments à animer
-            document.querySelectorAll('.program-card, .about-section, .gallery-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
+                <div class="footer-links">
+                    <div class="link-column">
+                        <a href="#home">Home</a>
+                        <a href="#programs">Programs</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#maps">Location / Maps</a>
+                    </div>
+                    <div class="link-column">
+                        <a href="#">Calendars & Schedules</a>
+                        <a href="#">Clever</a>
+                        <a href="#">Staff</a>
+                        <a href="#">Library Catalog</a>
+                        <div class="social-section">
+                            <hr>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            // Header shadow on scroll
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                if (window.scrollY > 100) {
-                    header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
-                } else {
-                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-                }
-            });
-        </script>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    Excellence International School 2018 | All Rights Reserved | Legal Notice
+                </div>
+                <div class="footer-credit">
+                    Website by: <strong>Mister Akanji</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    </body>
+    <!-- Popup Modal -->
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div class="popup-body">
+                <div class="popup-image">
+                    <img id="popup-img" src="" alt="Program Image">
+                    <!-- CONTENEUR POUR IMAGES SUPPLÉMENTAIRES -->
+                    <div class="additional-images" id="additional-images"></div>
+                </div>
+                <div class="popup-info">
+                    <h2 id="popup-title" class="text-2xl font-bold mb-4 text-gray-800">Program Details</h2>
+                    <p id="popup-message" class="text-gray-600 mb-6">Program description will appear here.</p>
+
+                    <div id="program-details" class="program-details">
+                        <!-- Les détails du programme seront insérés ici dynamiquement -->
+                    </div>
+
+                    <div class="program-features mt-6">
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Caractéristiques du Programme:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Enseignants Certifiés</li>
+                            <li><i class="fas fa-check"></i> Apprentissage Interactif</li>
+                            <li><i class="fas fa-check"></i> Installations Modernes</li>
+                            <li><i class="fas fa-check"></i> Programme International</li>
+                        </ul>
+                    </div>
+                    <button class="retour-btn" onclick="window.location.href='index.html'">
+                        Return to Home <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/doc.js" defer></script>
+
+</body>
+
 </html>
