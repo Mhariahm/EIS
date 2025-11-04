@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     img.src = imgSrc;
                     img.alt = title;
                     img.className = 'additional-image';
-                    img.onclick = function() {
+                    img.onclick = function () {
                         document.getElementById('popup-img').src = imgSrc;
                     };
                     additionalImagesContainer.appendChild(img);
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'auto';
         }
     });
-}); 
+});
 // ==================== FIN SECTION GESTION POPUP ====================
 
 // ==================== DÉBUT SECTION ANIMATION AU SCROLL ====================
@@ -252,3 +252,119 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // ==================== FIN SECTION FORMULAIRE WHATSAPP ====================
+
+// ==================== NAVIGATION MOBILE CORRIGÉE ====================
+
+// ==================== NAVIGATION MOBILE FONCTIONNELLE ====================
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const contactToggle = document.querySelector('.contact-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const contactInfo = document.querySelector('.contact-info:not(.desktop-contact)');
+    const navOverlay = document.querySelector('.nav-overlay');
+
+    // Menu Hamburger
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            mainNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            // Fermer contact info si ouvert
+            if (contactInfo) contactInfo.classList.remove('active');
+        });
+    }
+
+    // Contact Toggle
+    if (contactToggle && contactInfo) {
+        contactToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            contactInfo.classList.toggle('active');
+            // Fermer menu nav si ouvert
+            if (mainNav) mainNav.classList.remove('active');
+            if (navOverlay) navOverlay.classList.remove('active');
+        });
+    }
+
+    // Fermer en cliquant sur l'overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', function () {
+            if (mainNav) mainNav.classList.remove('active');
+            if (contactInfo) contactInfo.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+    }
+
+    // Fermer en cliquant sur un lien du menu
+    if (mainNav) {
+        mainNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+                mainNav.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            });
+        });
+    }
+
+    // Fermer en appuyant sur Echap
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            if (mainNav) mainNav.classList.remove('active');
+            if (contactInfo) contactInfo.classList.remove('active');
+            if (navOverlay) navOverlay.classList.remove('active');
+        }
+    });
+});
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const menuToggle = document.querySelector('.menu-toggle');
+//     const contactToggle = document.querySelector('.contact-toggle');
+//     const mainNav = document.querySelector('.main-nav');
+//     const contactInfo = document.querySelector('.contact-info');
+//     const navOverlay = document.querySelector('.nav-overlay');
+
+//     // Menu Hamburger
+//     if (menuToggle && mainNav) {
+//         menuToggle.addEventListener('click', function (e) {
+//             e.stopPropagation();
+//             mainNav.classList.toggle('active');
+//             navOverlay.classList.toggle('active');
+//             contactInfo.classList.remove('active');
+//         });
+//     }
+
+//     // Contact Toggle
+//     if (contactToggle && contactInfo) {
+//         contactToggle.addEventListener('click', function (e) {
+//             e.stopPropagation();
+//             contactInfo.classList.toggle('active');
+//             mainNav.classList.remove('active');
+//             navOverlay.classList.remove('active');
+//         });
+//     }
+
+//     // Fermer en cliquant sur l'overlay
+//     if (navOverlay) {
+//         navOverlay.addEventListener('click', function () {
+//             mainNav.classList.remove('active');
+//             contactInfo.classList.remove('active');
+//             navOverlay.classList.remove('active');
+//         });
+//     }
+
+//     // Fermer en cliquant ailleurs
+//     document.addEventListener('click', function (e) {
+//         if (!contactToggle.contains(e.target) && !contactInfo.contains(e.target)) {
+//             contactInfo.classList.remove('active');
+//         }
+//     });
+
+//     // Fermer le menu en cliquant sur un lien
+//     document.querySelectorAll('.nav-link').forEach(link => {
+//         link.addEventListener('click', function () {
+//             mainNav.classList.remove('active');
+//             navOverlay.classList.remove('active');
+//         });
+//     });
+// });
+
+// ==================== Fin SECTION CONTACT MOBILE ====================

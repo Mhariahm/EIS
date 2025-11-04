@@ -9,19 +9,52 @@
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+
     <header class="header">
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <div class="logo-container">
             <img src="Images et Icones/Logo.png" alt="EIS Logo" class="logo">
         </div>
+
+        <button class="contact-toggle">
+            <i class="fa-solid fa-phone"></i>
+        </button>
+
+        <div class="contact-info">
+            <a href="tel:+2250505944492"> <i class="fa-solid fa-phone-volume"></i> (225) 050 594 4492</a> <br>
+            <a href="tel:+2348078634115"> <i class="fa-solid fa-phone-volume"></i> (234) 807 863 4115</a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#maps" class="nav-link">Location / Maps</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-overlay"></div>
+
+        <!-- Header Content (visible seulement sur desktop) -->
         <div class="header-content">
-            <div class="contact-info">
+            <div class="contact-info desktop-contact">
                 <a href="tel:+2250505944492"> <i class="fa-solid fa-phone-volume"></i> (225) 050 594 4492</a> <br>
                 <a href="tel:+2348078634115"> <i class="fa-solid fa-phone-volume"></i> (234) 807 863 4115</a>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav desktop-nav">
                 <ul>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#programs" class="nav-link">Programs</a></li>
@@ -31,6 +64,9 @@
                 </ul>
             </nav>
         </div>
+        <!-- <div class="head">
+            
+        </div> -->
     </header>
 
     <!-- Home Section -->
@@ -125,7 +161,8 @@
                 </p>
                 <p class="description">
                     Graduates of Excellence International Schools are well-prepared to face the challenges of <span
-                        class="highlight"> higher education, grounded in Islamic faith, moral integrity, and lifelong values </span>. Guided by our commitment
+                        class="highlight"> higher education, grounded in Islamic faith, moral integrity, and lifelong
+                        values </span>. Guided by our commitment
                     to excellence and continuous improvement, our institutions operate under recognized international
                     educational standards.
                 </p>
