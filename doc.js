@@ -312,59 +312,69 @@ document.addEventListener('DOMContentLoaded', function () {
             if (navOverlay) navOverlay.classList.remove('active');
         }
     });
-});
+}); // ==================== Fin SECTION CONTACT MOBILE ====================
 
+//====================        MESSAGE D'OUVERTURE           ====================
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const menuToggle = document.querySelector('.menu-toggle');
-//     const contactToggle = document.querySelector('.contact-toggle');
-//     const mainNav = document.querySelector('.main-nav');
-//     const contactInfo = document.querySelector('.contact-info');
-//     const navOverlay = document.querySelector('.nav-overlay');
+// ==================== POPUP DE BIENVENUE ====================
+function initWelcomePopup() {
+    const popup = document.getElementById('welcomePopup');
+    const closeBtn = document.getElementById('closePopup');
+    const startBtn = document.getElementById('startBtn');
 
-//     // Menu Hamburger
-//     if (menuToggle && mainNav) {
-//         menuToggle.addEventListener('click', function (e) {
-//             e.stopPropagation();
-//             mainNav.classList.toggle('active');
-//             navOverlay.classList.toggle('active');
-//             contactInfo.classList.remove('active');
-//         });
-//     }
+    // Vérifier que tous les éléments existent
+    if (!popup || !closeBtn || !startBtn) {
+        console.log('Éléments du popup non trouvés');
+        return;
+    }
 
-//     // Contact Toggle
-//     if (contactToggle && contactInfo) {
-//         contactToggle.addEventListener('click', function (e) {
-//             e.stopPropagation();
-//             contactInfo.classList.toggle('active');
-//             mainNav.classList.remove('active');
-//             navOverlay.classList.remove('active');
-//         });
-//     }
+    // Fonction pour montrer le popup
+    function showPopup() {
+        popup.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
 
-//     // Fermer en cliquant sur l'overlay
-//     if (navOverlay) {
-//         navOverlay.addEventListener('click', function () {
-//             mainNav.classList.remove('active');
-//             contactInfo.classList.remove('active');
-//             navOverlay.classList.remove('active');
-//         });
-//     }
+    // Fonction pour cacher le popup
+    function hidePopup() {
+        popup.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        localStorage.setItem('welcomeSeen', 'true');
+    }
 
-//     // Fermer en cliquant ailleurs
-//     document.addEventListener('click', function (e) {
-//         if (!contactToggle.contains(e.target) && !contactInfo.contains(e.target)) {
-//             contactInfo.classList.remove('active');
-//         }
-//     });
+    // Événements
+    closeBtn.addEventListener('click', hidePopup);
+    startBtn.addEventListener('click', hidePopup);
 
-//     // Fermer le menu en cliquant sur un lien
-//     document.querySelectorAll('.nav-link').forEach(link => {
-//         link.addEventListener('click', function () {
-//             mainNav.classList.remove('active');
-//             navOverlay.classList.remove('active');
-//         });
-//     });
-// });
+    // Fermer en cliquant en dehors
+    popup.addEventListener('click', function (e) {
+        if (e.target === popup) {
+            hidePopup();
+        }
+    });
 
-// ==================== Fin SECTION CONTACT MOBILE ====================
+    // Fermer avec Echap
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('show')) {
+            hidePopup();
+        }
+    });
+
+    // Afficher le popup si pas déjà vu
+    if (!localStorage.getItem('welcomeSeen')) {
+        setTimeout(showPopup, 1000);
+    }
+}
+
+// Démarrer quand la page est chargée
+document.addEventListener('DOMContentLoaded', initWelcomePopup);
+
+// TEST : FORCER L'AFFICHAGE - SUPPRIMEZ APRÈS TEST
+setTimeout(() => {
+    const popup = document.getElementById('welcomePopup');
+    if (popup) {
+        popup.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+}, 500);
+
+// ==================== Fin MESSAGE D'OUVERTURE ====================

@@ -2,7 +2,7 @@
     font-family: 'poppins', sans-serif;
     width: 100%;
     overflow-x: hidden;
-}
+} */
 
 /* Reset et styles de base */
 * {
@@ -208,59 +208,6 @@ body {
     background: #f8f9fa;
 }
 
-/* .programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.program-card {
-    position: relative;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.program-card:hover {
-    transform: translateY(-10px);
-}
-
-.program-card img {
-    width: 100%;
-    height: 200px;
-    /* object-fit: cover; *
-}
-
-.program-card h4 {
-    padding: 20px;
-    text-align: center;
-    color: #333;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0,100,0,0.9), rgba(0,128,0,0.8));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.program-card:hover .overlay {
-    opacity: 1;
-} */
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -360,22 +307,6 @@ body {
     flex-direction: column;
     padding: 0;
 }
-
-/* .popup-image {
-    flex: 1;
-    background-color: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    /* order: 1; Photo en premier *
-} .popup-image img {
-    max-width: 100%;
-    max-height: 300px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-} */
-
 
 .popup-info {
     flex: 2;
@@ -1147,9 +1078,8 @@ footer {
         text-align: center;
     }
 }
-<<<<<<< HEAD:Style.css
 
-/* ==================== RESPONSIVE DESIGN ==================== */
+/* ==================== RESPONSIVE DESIGN & ==================== */
 
 /* Header Mobile Corrigé */
 @media (max-width: 768px) {
@@ -1163,6 +1093,7 @@ footer {
         position: relative;
         /* display: grid; */
     }
+
     .head {
         margin-top: 15px;
     }
@@ -1333,7 +1264,7 @@ footer {
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 6px;
-        transition: background 0.3s ease;
+        transition: 0.3s ease;
     }
 
     .contact-info:not(.desktop-contact) a:hover {
@@ -1748,5 +1679,177 @@ footer {
         display: none !important;
     }
 }
-=======
->>>>>>> d2dac67ced0bf86f99809807ce549e710fd804b1:style.css
+
+/* Message d'ouverture MESSAGE MESSAGE MESSAGE MESSAGE MESSAGE MESSAGE MESSAGE MESSAGE MESSAGE*/
+
+/* ===== WELCOME POPUP ===== */
+.welcome-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.welcome-popup.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.welcome-content {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.welcome-header {
+    background: linear-gradient(135deg, #006400, #008000);
+    padding: 25px 20px 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 16px 16px 0 0;
+}
+
+.welcome-icon {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.welcome-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.welcome-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.welcome-body {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.welcome-body h2 {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.welcome-body h1 {
+    color: #006400;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.welcome-body p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.welcome-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background: rgba(0, 128, 0, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #008000;
+    font-size: 0.9rem;
+}
+
+.feature-item i {
+    color: #008000;
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.feature-item span {
+    color: #333;
+    font-weight: 600;
+}
+
+.welcome-footer {
+    padding: 20px 25px 30px;
+    text-align: center;
+}
+
+.welcome-btn {
+    background: linear-gradient(135deg, #006400, #008000);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+}
+
+.welcome-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 128, 0, 0.4);
+}
