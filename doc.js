@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     img.src = imgSrc;
                     img.alt = title;
                     img.className = 'additional-image';
-                    img.onclick = function() {
+                    img.onclick = function () {
                         document.getElementById('popup-img').src = imgSrc;
                     };
                     additionalImagesContainer.appendChild(img);
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = 'auto';
         }
     });
-}); 
+});
 // ==================== FIN SECTION GESTION POPUP ====================
 
 // ==================== DÉBUT SECTION ANIMATION AU SCROLL ====================
@@ -252,3 +252,156 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // ==================== FIN SECTION FORMULAIRE WHATSAPP ====================
+
+// ==================== NAVIGATION MOBILE CORRIGÉE ====================
+
+// ==================== NAVIGATION MOBILE FONCTIONNELLE ====================
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const contactToggle = document.querySelector('.contact-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const contactInfo = document.querySelector('.contact-info:not(.desktop-contact)');
+    const navOverlay = document.querySelector('.nav-overlay');
+
+    // Menu Hamburger
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            mainNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            // Fermer contact info si ouvert
+            if (contactInfo) contactInfo.classList.remove('active');
+        });
+    }
+
+    // Contact Toggle
+    if (contactToggle && contactInfo) {
+        contactToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            contactInfo.classList.toggle('active');
+            // Fermer menu nav si ouvert
+            if (mainNav) mainNav.classList.remove('active');
+            if (navOverlay) navOverlay.classList.remove('active');
+        });
+    }
+
+    // Fermer en cliquant sur l'overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', function () {
+            if (mainNav) mainNav.classList.remove('active');
+            if (contactInfo) contactInfo.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+    }
+
+    // Fermer en cliquant sur un lien du menu
+    if (mainNav) {
+        mainNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+                mainNav.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+            });
+        });
+    }
+
+    // Fermer en appuyant sur Echap
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            if (mainNav) mainNav.classList.remove('active');
+            if (contactInfo) contactInfo.classList.remove('active');
+            if (navOverlay) navOverlay.classList.remove('active');
+        }
+    });
+}); // ==================== Fin SECTION CONTACT MOBILE ====================
+
+//====================        MESSAGE D'OUVERTURE           ====================
+
+// ==================== POPUP DE BIENVENUE ====================
+function initWelcomePopup() {
+    const popup = document.getElementById('welcomePopup');
+    const closeBtn = document.getElementById('closePopup');
+    const startBtn = document.getElementById('startBtn');
+
+    // Vérifier que tous les éléments existent
+    if (!popup || !closeBtn || !startBtn) {
+        console.log('Éléments du popup non trouvés');
+        return;
+    }
+
+    // Fonction pour montrer le popup
+    function showPopup() {
+        popup.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Fonction pour cacher le popup
+    function hidePopup() {
+        popup.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        localStorage.setItem('welcomeSeen', 'true');
+    }
+
+    // Événements
+    closeBtn.addEventListener('click', hidePopup);
+    startBtn.addEventListener('click', hidePopup);
+
+    // Fermer en cliquant en dehors
+    popup.addEventListener('click', function (e) {
+        if (e.target === popup) {
+            hidePopup();
+        }
+    });
+
+    // Fermer avec Echap
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('show')) {
+            hidePopup();
+        }
+    });
+
+    // Afficher le popup si pas déjà vu
+    if (!localStorage.getItem('welcomeSeen')) {
+        setTimeout(showPopup, 1000);
+    }
+}
+
+// Démarrer quand la page est chargée
+document.addEventListener('DOMContentLoaded', initWelcomePopup);
+
+// TEST : FORCER L'AFFICHAGE - SUPPRIMEZ APRÈS TEST
+setTimeout(() => {
+    const popup = document.getElementById('welcomePopup');
+    if (popup) {
+        popup.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+}, 500);
+
+// ==================== Fin MESSAGE D'OUVERTURE ====================
+
+// ==================== JS : ouvrir / fermer la modale ====================
+
+const modal = document.getElementById('calendarModal');
+const openLink = document.getElementById('openCalendar');
+const closeBtn = document.getElementById('closeModal');
+
+openLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// Fermer la modale en cliquant en dehors
+// modal.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         modal.style.display = 'none';
+//         document.body.style.overflow = 'auto';
+//     }
+// });
+
+// ==================== JS : ouvrir / fermer la modale ====================
