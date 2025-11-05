@@ -378,3 +378,30 @@ setTimeout(() => {
 }, 500);
 
 // ==================== Fin MESSAGE D'OUVERTURE ====================
+
+// ==================== JS : ouvrir / fermer la modale ====================
+
+const modal = document.getElementById('calendarModal');
+const openLink = document.getElementById('openCalendar');
+const closeBtn = document.getElementById('closeModal');
+
+openLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// Fermer la modale en cliquant en dehors
+// modal.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         modal.style.display = 'none';
+//         document.body.style.overflow = 'auto';
+//     }
+// });
+
+// ==================== JS : ouvrir / fermer la modale ====================
